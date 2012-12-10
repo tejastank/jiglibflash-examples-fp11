@@ -191,6 +191,7 @@
 			view.render();
 		}
 		
+		/*
 		// Switch skins for active and not active state in the physic engine
 		private function changeMatMeshActive():void {
 			for each (var rigidBody:RigidBody in rigidBodies) {
@@ -207,6 +208,7 @@
 				}
 			} 
 		}
+		*/
 		
 		private function startEventListeners():void {
 			this.addEventListener(Event.ENTER_FRAME, handleEnterFrame, false, 0, true);

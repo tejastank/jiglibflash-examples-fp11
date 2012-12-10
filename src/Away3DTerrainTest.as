@@ -3,8 +3,6 @@
     import away3d.containers.*;
     import away3d.lights.PointLight;
     import away3d.materials.ColorMaterial;
-    import away3d.primitives.*;
-    import away3d.entities.Mesh;
     
     import flash.display.Bitmap;
     import flash.display.Sprite;
@@ -16,7 +14,6 @@
     import jiglib.cof.JConfig;
     import jiglib.debug.Stats;
     import jiglib.geometry.*;
-    import jiglib.math.*;
     import jiglib.physics.RigidBody;
     import jiglib.plugin.away3d4.*;
     

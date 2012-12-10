@@ -33,11 +33,11 @@
 
 			// Different demos, uncomment one
 			
-//			var away3DCarDrive : Away3DCarDrive = new Away3DCarDrive();
-//			this.addChild(away3DCarDrive);
+			var away3DCarDrive : Away3DCarDrive = new Away3DCarDrive();
+			this.addChild(away3DCarDrive);
 			
-			var away3DGridSystem:Away3DGridSystem = new Away3DGridSystem();
-			this.addChild(away3DGridSystem);
+//			var away3DGridSystem:Away3DGridSystem = new Away3DGridSystem();
+//			this.addChild(away3DGridSystem);
 
 //			var away3DStackingTest:Away3DStackingTest = new Away3DStackingTest();
 //			this.addChild(away3DStackingTest);
@@ -45,6 +45,7 @@
 //			var away3DTerrainTest:Away3DTerrainTest = new Away3DTerrainTest();
 //			this.addChild(away3DTerrainTest);
 
+			// TODO Fix triangle mesh
 //			var away3DTriangleMesh:Away3DTriangleMesh = new Away3DTriangleMesh();
 //			this.addChild(away3DTriangleMesh);
 

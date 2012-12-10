@@ -3,23 +3,17 @@ package
 	import away3d.containers.View3D;
 	import away3d.lights.PointLight;
 	import away3d.materials.ColorMaterial;
-	
+
+	import jiglib.debug.Stats;
+	import jiglib.events.JCollisionEvent;
+	import jiglib.physics.*;
+	import jiglib.plugin.away3d4.*;
+
 	import flash.display.Sprite;
 	import flash.events.Event;
 	import flash.events.KeyboardEvent;
-	import flash.events.MouseEvent;
-	import flash.geom.ColorTransform;
-	import flash.geom.Matrix3D;
 	import flash.geom.Vector3D;
 	import flash.ui.Keyboard;
-	
-	import jiglib.cof.JConfig;
-	import jiglib.debug.Stats;
-	import jiglib.events.JCollisionEvent;
-	import jiglib.geometry.*;
-	import jiglib.math.*;
-	import jiglib.physics.*;
-	import jiglib.plugin.away3d4.*;
 	
 	/**
 	 * ...

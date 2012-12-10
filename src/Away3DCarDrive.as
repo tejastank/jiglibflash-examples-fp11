@@ -76,11 +76,9 @@ package
 			physics = new Away3D4Physics(view, 6);
 			
 			var material:ColorMaterial = new ColorMaterial(0x77ee77);
-			//material.lights = [mylight];
-			var ground:RigidBody = physics.createGround(material, 1000, 1000);
+			physics.createGround(material, 1000, 1000);
 			
 			material = new ColorMaterial(0xeeee00);
-			//material.lights = [mylight];
 			boxBody = new Vector.<RigidBody>();
 			for (var i:int = 0; i < 3; i++)
 			{

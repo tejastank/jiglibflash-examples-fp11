@@ -1,29 +1,17 @@
-package
-{
-	import away3d.materials.methods.FogMethod;
-	import away3d.materials.lightpickers.StaticLightPicker;
-	import away3d.lights.DirectionalLight;
-	import away3d.tools.helpers.LightsHelper;
-	import away3d.textures.BitmapTexture;
-	import away3d.materials.TextureMaterial;
+package {
+	import away3d.containers.ObjectContainer3D;
 	import away3d.containers.View3D;
+	import away3d.entities.Mesh;
 	import away3d.events.LoaderEvent;
-	import away3d.lights.PointLight;
+	import away3d.lights.DirectionalLight;
 	import away3d.loaders.Loader3D;
 	import away3d.loaders.parsers.Parsers;
-	import away3d.materials.BitmapMaterial;
 	import away3d.materials.ColorMaterial;
-	import away3d.entities.Mesh;
-	import away3d.containers.ObjectContainer3D;
-	
-	import flash.display.BitmapData;
-	import flash.display.Sprite;
-	import flash.events.*;
-	import flash.net.URLRequest;
-	import flash.geom.Matrix3D;
-	import flash.geom.Vector3D;
-	import flash.ui.Keyboard;
-	
+	import away3d.materials.TextureMaterial;
+	import away3d.materials.lightpickers.StaticLightPicker;
+	import away3d.materials.methods.FogMethod;
+	import away3d.textures.BitmapTexture;
+
 	import jiglib.cof.JConfig;
 	import jiglib.debug.Stats;
 	import jiglib.geometry.JTriangleMesh;
@@ -32,7 +20,14 @@ package
 	import jiglib.physics.constraint.*;
 	import jiglib.plugin.away3d4.*;
 	import jiglib.vehicles.JCar;
-	import jiglib.vehicles.JWheel;
+
+	import flash.display.Bitmap;
+	import flash.display.Sprite;
+	import flash.events.*;
+	import flash.geom.Matrix3D;
+	import flash.geom.Vector3D;
+	import flash.net.URLRequest;
+	import flash.ui.Keyboard;
 	
 	public class Away3DTriangleMesh extends Sprite
 	{
@@ -41,7 +36,7 @@ package
 		private var CarSkin : Class;
 		
 		private var view:View3D;
-		private var mylight:PointLight;
+		//private var mylight:PointLight;
 		
 		private var containerCity:ObjectContainer3D;
 		private var containerCar:ObjectContainer3D;
@@ -184,8 +179,8 @@ package
 				}
 			}
 			var len:int=bridgeBodies.length;
-			var pos1:Vector3D;
-			var pos2:Vector3D;
+			//var pos1:Vector3D;
+			//var pos2:Vector3D;
 			for (i = 1; i < len; i++ ){
 				//set up the hinge joints.
 				bridges[i-1] = new HingeJoint(bridgeBodies[i - 1], bridgeBodies[i], Vector3D.Z_AXIS, new Vector3D(130, 0, 0), 100, 50, 50, 0.1, 0.5);
@@ -202,7 +197,7 @@ package
 			containerCar = ObjectContainer3D(event.target);
 			view.scene.addChild(containerCar);
 			
-			var carMaterial:TextureMaterial = new TextureMaterial(new BitmapTexture(new CarSkin().bitmapData));
+			var carMaterial:TextureMaterial = new TextureMaterial(new BitmapTexture(Bitmap(new CarSkin()).bitmapData));
 			carMaterial.lightPicker = lightPicker;
 			carMaterial.ambientColor = 0x303040;
 			carMaterial.ambient = 1;
